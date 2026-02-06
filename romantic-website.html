@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .page {
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+            position: absolute;
+            width: 100%;
+            min-height: 100vh;
+            display: none;
+        }
+
+        .page.active {
+            opacity: 1;
+            display: block;
+            position: relative;
+        }
+
+        .bounce-animation {
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .arrow-bounce {
+            animation: arrowBounce 1.5s infinite;
+        }
+
+        @keyframes arrowBounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 2rem;
+            animation: floatHeart 6s infinite;
+            opacity: 0;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #ff6b9d, #c44569);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .romantic-gradient {
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 50%, #ffd4e9 100%);
+        }
+
+        .landing-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+
+        .guilt-gradient {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .dancing-script {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .pacifico {
+            font-family: 'Pacifico', cursive;
+        }
+
+        .image-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .timer-box {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(255, 107, 157, 0.2);
+        }
+
+        .timer-unit {
+            display: inline-block;
+            margin: 0 0.5rem;
+            text-align: center;
+        }
+
+        .timer-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #c44569;
+            display: block;
+        }
+
+        .timer-label {
+            font-size: 0.875rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .timer-value {
+                font-size: 1.5rem;
+            }
+
+            .timer-unit {
+                margin: 0 0.25rem;
+            }
+
+            body {
+                font-size: 14px;
+            }
+
+            .pacifico {
+                line-height: 1.3;
+            }
+
+            .dancing-script {
+                line-height: 1.3;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .timer-value {
+                font-size: 1.2rem;
+            }
+
+            .timer-label {
+                font-size: 0.65rem;
+            }
+
+            .timer-unit {
+                margin: 0 0.15rem;
+            }
+
+            .timer-box {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Landing Page -->
+    <div id="landingPage" class="page active landing-gradient">
+        <div class="min-h-screen flex flex-col md:flex-row items-center justify-center p-4 md:p-8">
+            <!-- Left Side - Image -->
+            <div class="w-full md:w-1/2 flex items-center justify-center p-4 md:p-8">
+                <div class="w-full max-w-md aspect-square pulse-animation">
+                    <img src="landing-page.png" alt="My Love" class="w-full h-full object-contain">
+                </div>
+            </div>
+
+            <!-- Right Side - Text and Buttons -->
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center p-4 md:p-8 text-center">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 md:mb-6 pacifico px-2">
+                    If you love me...
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl text-white mb-6 md:mb-8 font-light px-2">
+                    Click this button 👇
+                </p>
+                <div class="arrow-bounce text-5xl sm:text-6xl mb-6 md:mb-8">
+                    ⬇️
+                </div>
+
+                <div class="flex flex-col gap-4 items-center justify-center w-full max-w-md px-4">
+                    <button onclick="showYesPage()"
+                        class="bounce-animation bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold py-5 sm:py-6 px-12 sm:px-16 rounded-full text-2xl sm:text-3xl shadow-2xl transform transition hover:scale-110 active:scale-95 w-full sm:w-auto">
+                        YES! 💚
+                    </button>
+                    <button onclick="showNoPage()"
+                        class="bg-red-400 hover:bg-red-500 active:bg-red-600 text-white font-semibold py-3 px-8 rounded-full text-base sm:text-lg shadow-lg transform transition hover:scale-105 active:scale-95">
+                        No 😢
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- No Page (Guilt Trip) -->
+    <div id="noPage" class="page guilt-gradient">
+        <div class="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 relative">
+            <!-- Massive Image in Top Left -->
+            <div
+                class="absolute top-4 left-4 md:top-8 md:left-8 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px] z-10">
+                <img src="no-page.png" alt="Really?" class="w-full h-full object-contain">
+            </div>
+
+            <div class="max-w-2xl w-full bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 text-center mx-4">
+                <h2
+                    class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 gradient-text pacifico leading-tight px-2">
+                    illa chenneng chikkuva bega yes othhu
+                </h2>
+
+                <button onclick="showYesPage()"
+                    class="bounce-animation bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 active:from-pink-700 active:to-red-700 text-white font-bold py-5 sm:py-6 px-12 sm:px-20 rounded-full text-2xl sm:text-3xl shadow-2xl transform transition hover:scale-110 active:scale-95 w-full sm:w-auto">
+                    YES! 💕
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yes Page (Romantic) -->
+    <div id="yesPage" class="page romantic-gradient">
+        <div class="min-h-screen p-4 md:p-8 py-12">
+            <!-- Floating Hearts -->
+            <div id="heartsContainer"></div>
+
+            <div class="max-w-6xl mx-auto px-2">
+                <h1
+                    class="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-8 sm:mb-12 gradient-text dancing-script px-2">
+                    I Knew It! 💖
+                </h1>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
+                    <!-- Photo Section -->
+                    <div class="flex items-center justify-center px-4">
+                        <div class="w-full max-w-sm md:max-w-md aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="yes-page.png" alt="Us" class="w-full h-full object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Message Section -->
+                    <div class="flex items-center px-4">
+                        <div class="bg-white bg-opacity-80 backdrop-blur-lg rounded-3xl p-6 sm:p-8 shadow-xl">
+                            <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 gradient-text">My Dearest Love,</h2>
+                            <p class="text-gray-700 text-base sm:text-lg leading-relaxed mb-3 sm:mb-4">
+                                Every moment with you feels like a beautiful dream I never want to wake up from.
+                                You light up my world in ways I never thought possible.
+                            </p>
+                            <p class="text-gray-700 text-base sm:text-lg leading-relaxed mb-3 sm:mb-4">
+                                Your smile is my favorite view, your laugh is my favorite sound, and your happiness
+                                is my favorite goal. Thank you for being the most amazing person in my life.
+                            </p>
+                            <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+                                I love you more than words can express, and I can't wait to create countless more
+                                memories with you. You're my forever and always. 💕
+                            </p>
+                            <p class="text-right mt-4 sm:mt-6 text-lg sm:text-xl gradient-text font-semibold">
+                                Forever yours ❤️
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timer Section -->
+                <div class="text-center px-4">
+                    <h2
+                        class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 gradient-text dancing-script px-2">
+                        Time Since We Started Dating
+                    </h2>
+                    <div class="timer-box inline-block w-full sm:w-auto">
+                        <div id="timer" class="flex flex-wrap justify-center items-center gap-1 sm:gap-2">
+                            <!-- Timer will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Page Navigation
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            setTimeout(() => {
+                document.getElementById(pageId).classList.add('active');
+                if (pageId === 'yesPage') {
+                    startHeartAnimation();
+                    updateTimer();
+                    setInterval(updateTimer, 1000);
+                }
+            }, 100);
+        }
+
+        function showNoPage() {
+            showPage('noPage');
+        }
+
+        function showYesPage() {
+            showPage('yesPage');
+        }
+
+        // Heart Animation
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            document.getElementById('heartsContainer').appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 7000);
+        }
+
+        function startHeartAnimation() {
+            setInterval(createHeart, 800);
+        }
+
+        // Timer Function
+        function updateTimer() {
+            const startDate = new Date('2024-12-25T00:00:00');
+            const now = new Date();
+
+            let diff = now - startDate;
+
+            // Calculate time units
+            const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+            diff -= years * (1000 * 60 * 60 * 24 * 365.25);
+
+            const months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30.44));
+            diff -= months * (1000 * 60 * 60 * 24 * 30.44);
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            diff -= days * (1000 * 60 * 60 * 24);
+
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            diff -= hours * (1000 * 60 * 60);
+
+            const minutes = Math.floor(diff / (1000 * 60));
+            diff -= minutes * (1000 * 60);
+
+            const seconds = Math.floor(diff / 1000);
+
+            // Update display
+            const timerHTML = `
+                <div class="timer-unit">
+                    <span class="timer-value">${years}</span>
+                    <span class="timer-label">Year${years !== 1 ? 's' : ''}</span>
+                </div>
+                <div class="timer-unit">
+                    <span class="timer-value">${months}</span>
+                    <span class="timer-label">Month${months !== 1 ? 's' : ''}</span>
+                </div>
+                <div class="timer-unit">
+                    <span class="timer-value">${days}</span>
+                    <span class="timer-label">Day${days !== 1 ? 's' : ''}</span>
+                </div>
+                <div class="timer-unit">
+                    <span class="timer-value">${hours}</span>
+                    <span class="timer-label">Hour${hours !== 1 ? 's' : ''}</span>
+                </div>
+                <div class="timer-unit">
+                    <span class="timer-value">${minutes}</span>
+                    <span class="timer-label">Min${minutes !== 1 ? 's' : ''}</span>
+                </div>
+                <div class="timer-unit">
+                    <span class="timer-value">${seconds}</span>
+                    <span class="timer-label">Sec${seconds !== 1 ? 's' : ''}</span>
+                </div>
+            `;
+
+            document.getElementById('timer').innerHTML = timerHTML;
+        }
+    </script>
+</body>
+
+</html>
