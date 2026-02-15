@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Memory Scrapboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a2916d",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#1b1a17",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .coffee-stain {
+            background-image: radial-gradient(circle at 20% 30%, rgba(162, 145, 109, 0.05) 0%, transparent 15%),
+                              radial-gradient(circle at 80% 70%, rgba(162, 145, 109, 0.03) 0%, transparent 20%),
+                              radial-gradient(circle at 50% 10%, rgba(162, 145, 109, 0.04) 0%, transparent 10%);
+        }
+        .polaroid-shadow {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-stone-800 dark:text-stone-200 min-h-screen">
+<!-- Header -->
+<header class="pt-12 pb-6 px-6 text-center sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-30">
+<h1 class="text-3xl font-bold text-primary tracking-tight">Our Little Moments</h1>
+<p class="text-sm text-primary/60 mt-1 font-medium">A scrapbook of us</p>
+</header>
+<!-- Main Canvas -->
+<main class="relative px-6 pb-32 coffee-stain min-h-screen overflow-hidden">
+<!-- Memory Row 1 -->
+<div class="flex flex-col gap-12 mt-8">
+<!-- Polaroid 1 -->
+<div class="relative flex justify-center transform -rotate-2">
+<div class="bg-white dark:bg-stone-800 p-3 pb-8 polaroid-shadow rounded-sm w-full max-w-[280px]">
+<div class="aspect-square bg-stone-100 dark:bg-stone-900 overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover grayscale-[20%]" data-alt="Couple sharing a coffee in a cafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq3uTM-VkS400n4MxpsljjQ5H-cZiQPaz_9pMymqEMGsK-AVPFD4Bf6My1Lfam3wnZAuFKuxOR9KGnJE9MNN6xK6xCE05BQKa2-deKPe9gRYNXEz2U_fabjqn2Tu2wK2DItJAEioXljVHRayNofylURMdkjmLJCcHsgx6TPEJSHo1ce5LmMXrOgL-bg9asEQu6NJj0QLwa1_wuA6qEfkosxGyVezk6qgzNIiNhDy3ejeIuLTl48HQRJaTkq-iI3hsPDG_zDgGz3Vp-"/>
+</div>
+<div class="mt-4 px-1">
+<p class="text-primary font-medium italic text-sm tracking-wide">First Date • Oct 12, 2023</p>
+</div>
+</div>
+<div class="absolute -top-4 -left-2 text-primary/20 transform -rotate-12">
+<span class="material-icons text-5xl">favorite</span>
+</div>
+</div>
+<!-- Polaroid 2 -->
+<div class="relative flex justify-end transform rotate-3">
+<div class="bg-white dark:bg-stone-800 p-3 pb-8 polaroid-shadow rounded-sm w-full max-w-[260px]">
+<div class="aspect-square bg-stone-100 dark:bg-stone-900 overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover" data-alt="Two latte mugs on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAabErZ2mZBeW9tA3i1vrH7SI9cwJDJF35vOLuEGtXG8Mc8rmVvRo2ssOTKh9yIw7SlRXMzDHScoy1WlZqtOXoUORfL_if_zHoIyD98daY-6EJZr8NQOP1_3I6ONjaEzWiCnGHxIlKkvchCF44_2X7kZuXY5WlP3PURrQ5L5o5vb0HXfiYbRWeEJwVJHgrae04G9ZsdydoUB_kt-lLORZaDopVpaa2Zw4ZE1W2decyDtUS6nS9D6CRyQe4WrUBfJDIYZlWSYxvheNt0"/>
+</div>
+<div class="mt-4 px-1">
+<p class="text-primary font-medium italic text-sm tracking-wide">The Rainy Afternoon</p>
+</div>
+</div>
+</div>
+<!-- Question Card -->
+<div class="bg-primary/10 dark:bg-primary/5 p-8 rounded-xl border-2 border-dashed border-primary/30 text-center my-4">
+<h2 class="text-xl font-bold text-primary mb-4">Do you still love me?</h2>
+<div class="flex justify-center gap-4">
+<button class="bg-primary text-white px-8 py-2 rounded-full font-semibold shadow-lg active:scale-95 transition-transform">
+                        Yes!
+                    </button>
+<button class="bg-white dark:bg-stone-800 text-primary border border-primary/20 px-8 py-2 rounded-full font-semibold shadow-sm active:scale-95 transition-transform">
+                        Always
+                    </button>
+</div>
+</div>
+<!-- Polaroid 3 -->
+<div class="relative flex justify-start transform -rotate-3">
+<div class="bg-white dark:bg-stone-800 p-3 pb-8 polaroid-shadow rounded-sm w-full max-w-[270px]">
+<div class="aspect-square bg-stone-100 dark:bg-stone-900 overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover grayscale-[10%]" data-alt="A warm sunset view through cafe window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuZBXoWJQ-Uzt3kGAXZ7ePBVpJ7gogef9WwqJQO6Nv5RZrwmnp2BytNZ2kAAi3yOlOCJ4CJw78Pptfvlpl3UUSewgs2bquczfrRDlniK-UJ97UiCmycpU-yNqLp2vc6FCTlHrW4Fcn__oz9agm3HUQCBV0mr-doKAOvT2O_eIBMsqxEh_agnV57FH3oHQYWHzP5XZFhtv-CSN9k9qUMtYnc_lEpenFhyXtw87lcWVgFfzdQL3sa8-D6rJXo78Ok38kJtzP_jUEBXn5"/>
+</div>
+<div class="mt-4 px-1">
+<p class="text-primary font-medium italic text-sm tracking-wide">Nov 15 • Golden Hour</p>
+</div>
+</div>
+<div class="absolute -bottom-6 -right-2 transform rotate-12 opacity-40">
+<span class="material-icons text-primary text-6xl">local_cafe</span>
+</div>
+</div>
+<!-- Polaroid 4 -->
+<div class="relative flex justify-center transform rotate-1">
+<div class="bg-white dark:bg-stone-800 p-3 pb-8 polaroid-shadow rounded-sm w-full max-w-[280px]">
+<div class="aspect-square bg-stone-100 dark:bg-stone-900 overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover" data-alt="A smiling woman in a cozy sweater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu8-E-PRdFKRBpgvn7wZoUxWd2PiaUupGYbIbNLj9SvXEl3ttn-NDu9hPbHBaTmFGmSFHDpN8TZn4LHJ-EScK-fwRNWA591tqpMbjQlwEGni5Yk-fvdsS-TGkFhW1Z1mv7cec-UopuUpVUqsNT0vat8ywD8ZnplJUoj4iz21VBE19eW8TtTkdRcZnyO9J615a4mHT38OV95Rha79-_TYOzgGjbCGbWyKIvKKSxu2TruZl-eqNcIKDqwXvqhhGvN1xv8z_V8F4_kn8h"/>
+</div>
+<div class="mt-4 px-1">
+<p class="text-primary font-medium italic text-sm tracking-wide">Dec 24 • Winter Glow</p>
+</div>
+</div>
+</div>
+<!-- Final Love Note -->
+<div class="text-center py-10 px-4">
+<div class="inline-block bg-primary/20 p-2 rounded-full mb-4">
+<span class="material-icons text-primary">auto_awesome</span>
+</div>
+<p class="text-lg italic text-primary/80 leading-relaxed font-light">
+                    "Every cup of coffee tastes better when I'm across the table from you."
+                </p>
+</div>
+</div>
+</main>
+<!-- Floating Action for Interaction -->
+<div class="fixed bottom-24 right-6 z-40">
+<button class="bg-primary text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-icons">add_photo_alternate</span>
+</button>
+</div>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full p-6 bg-white/60 dark:bg-stone-900/60 backdrop-blur-xl border-t border-primary/10 z-50 text-center">
+<p class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary opacity-80">
+            Made with all my love ☕🤎
+        </p>
+</footer>
+</body></html>
